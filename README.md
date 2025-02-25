@@ -22,6 +22,8 @@ npm run build
 
 To customize the services provided, edit `src/cdn.ts` and mount the appropriate features. In this sample I am installing the OpenTelemetry ZoneContextManager.
 
+You do not need to build something like this unless you need to add additional non-UMD features to your UMD instrumentation file. For example, ZoneContextManager was not available as a UMD module. However, by building and bundling the module with rollup, you could access it.
+
 ## Using
 
 Copy the `dist/umd/index.js` file to your project or CDN location and serve it from a server.
